@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NammaWeb AI Suite | Certified AI Master Mentor Program</title>
-    <meta name="description" content="Become a Certified AI Trainer for Schools & PU Colleges under NEP 2020 guidelines. High-income career opportunity for educators and tech professionals.">
-    
+    <title>NammaWeb | Certified AI Master Mentor Program</title>
+    <meta name="description" content="High-income career opportunity. Join the Certified AI Master Mentor Program featuring AI tutorials, offline AI labs, and expert mentorship.">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -13,382 +12,447 @@
             theme: {
                 extend: {
                     colors: {
-                        brand: {
-                            gold: '#D4AF37',
-                            dark: '#0A0F1D',
-                            navy: '#111827',
-                            accent: '#2563EB',
-                            emerald: '#0f766e'
-                        }
+                        emeraldDark: '#022c22',
+                        emeraldDeep: '#064e3b',
+                        emeraldCard: '#065f46',
+                        tealBrand: '#0d9488',
+                        tealLight: '#2dd4bf',
+                        goldAccent: '#fbbf24',
                     }
                 }
             }
         }
     </script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-panel {
+            background: rgba(6, 78, 59, 0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(45, 212, 191, 0.15);
+        }
+        .glow-teal {
+            box-shadow: 0 0 40px -10px rgba(13, 148, 136, 0.3);
+        }
+    </style>
 </head>
-<body class="bg-brand-dark text-slate-100 font-sans antialiased selection:bg-brand-gold selection:text-black">
+<body class="bg-emeraldDark text-slate-100 antialiased selection:bg-tealBrand selection:text-white">
 
-    <!-- NAVIGATION HEADER -->
-    <header class="sticky top-0 z-40 backdrop-blur-md bg-brand-dark/90 border-b border-slate-800">
+    <!-- TOP BAR -->
+    <div class="bg-emeraldDeep/80 border-b border-teal/10 py-2 px-4 text-xs tracking-wider text-tealLight uppercase font-medium">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span><i class="fa-solid fa-envelope mr-1"></i> info@nammaweb.com</span>
+                <span><i class="fa-solid fa-phone mr-1"></i> +91 76765 46577</span>
+            </div>
+            <div class="text-goldAccent font-semibold tracking-widest">
+                <i class="fa-solid fa-crown mr-1"></i> High Income Career Opportunity
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 glass-panel border-b border-teal/20 backdrop-blur-md">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <div class="flex items-center space-x-3 cursor-pointer" onclick="switchPage('home')">
-                <!-- EXACT RECREATED TEAL GEOMETRIC LOGO VECTOR -->
-                <div class="w-10 h-10 rounded-xl bg-slate-900 border border-teal-500/40 flex items-center justify-center p-1.5 shadow-lg shadow-teal-950/50">
-                    <svg viewBox="0 0 500 500" class="w-full h-full text-teal-600" fill="none" stroke="currentColor" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M140 100 L320 280 L230 370 L50 190 Z"></path>
-                        <path d="M360 100 L180 280 L270 370 L450 190 Z"></path>
-                    </svg>
+            <!-- Brand Logo & Name linking to logo.png -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 relative flex items-center justify-center bg-white/5 rounded-xl p-1.5 border border-tealLight/30">
+                    <img src="logo.png" alt="NammaWeb Logo" class="w-full h-full object-contain transform group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-2xl font-extrabold tracking-tight text-white">Namma<span class="text-tealLight">Web</span></span>
+                    <span class="text-[10px] uppercase tracking-widest text-tealLight/80 font-semibold">info@nammaweb.com</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm text-slate-300">
+                <a href="#overview" class="hover:text-tealLight transition">Overview</a>
+                <a href="#curriculum" class="hover:text-tealLight transition">AI Lab & Tutorials</a>
+                <a href="#mentors" class="hover:text-tealLight transition">Mentors</a>
+                <a href="#pricing" class="hover:text-tealLight transition">Enrollment</a>
+                <a href="#blog" class="hover:text-tealLight transition">SEO Blog</a>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="flex items-center gap-4">
+                <a href="#pricing" class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-tealBrand to-tealLight text-emeraldDark font-bold px-6 py-2.5 rounded-xl shadow-lg hover:brightness-110 transition">
+                    <i class="fa-solid fa-bolt"></i> Secure Slot
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="overview" class="relative pt-20 pb-32 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-tealBrand/10 via-emeraldDark to-emeraldDark -z-10"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            
+            <!-- Hero Badge -->
+            <div class="inline-flex items-center gap-3 px-5 py-2 rounded-full glass-panel border border-tealLight/30 text-tealLight text-xs font-semibold mb-6 uppercase tracking-wider">
+                <div class="w-5 h-5 flex items-center justify-center">
+                    <img src="logo.png" alt="Logo" class="w-full h-full object-contain">
+                </div>
+                <span>Certified AI Master Mentor Program • info@nammaweb.com</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight max-w-5xl mx-auto leading-tight">
+                High-Income Career Opportunity in <span class="text-transparent bg-clip-text bg-gradient-to-r from-tealLight to-goldAccent">Artificial Intelligence</span>
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-3xl mx-auto font-light leading-relaxed">
+                Master comprehensive AI tutorials, gain hands-on execution experience in our offline AI labs, and receive direct 1-on-1 mentorship from globally certified industry veterans.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#pricing" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-tealBrand to-tealLight text-emeraldDark font-bold text-base shadow-xl hover:scale-105 transition text-center">
+                    View Indian Pricing & Book <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#curriculum" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-panel text-white font-semibold hover:bg-emeraldCard/40 transition text-center">
+                    Explore Offline AI Lab
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="glass-panel p-6 rounded-2xl">
+                    <div class="text-3xl font-extrabold text-tealLight">₹18L+</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Average Career Package</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl">
+                    <div class="text-3xl font-extrabold text-goldAccent">100%</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Practical Lab Access</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl">
+                    <div class="text-3xl font-extrabold text-tealLight">Certified</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">AI Master Mentors</div>
+                </div>
+                <div class="glass-panel p-6 rounded-2xl">
+                    <div class="text-3xl font-extrabold text-goldAccent">30 / 60 / 125</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase tracking-wider">Day Programs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURRICULUM & OFFLINE AI LAB -->
+    <section id="curriculum" class="py-24 bg-emeraldDeep/30 border-y border-teal/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest text-tealLight font-bold">Immersive Learning Experience</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">AI Tutorials & State-of-the-Art Offline Labs</h3>
+                <p class="text-slate-400 mt-4">Bridge the gap between theoretical concept and high-end enterprise execution with our hybrid curriculum model.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Module 1 -->
+                <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-tealLight/50 transition">
+                    <div class="absolute top-0 right-0 p-6 text-tealLight/20 text-6xl font-black group-hover:text-tealLight/30 transition">01</div>
+                    <div class="w-14 h-14 rounded-2xl bg-tealBrand/20 flex items-center justify-center text-tealLight text-2xl mb-6">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Comprehensive AI Tutorials</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Step-by-step guidance covering LLM architectures, agentic workflows, prompt engineering, fine-tuning, and full-stack production deployment.
+                    </p>
+                </div>
+
+                <!-- Module 2 -->
+                <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-tealLight/50 transition">
+                    <div class="absolute top-0 right-0 p-6 text-tealLight/20 text-6xl font-black group-hover:text-tealLight/30 transition">02</div>
+                    <div class="w-14 h-14 rounded-2xl bg-tealBrand/20 flex items-center justify-center text-tealLight text-2xl mb-6">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Offline AI Labs</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Work directly inside our physical offline AI innovation laboratories equipped with high-end hardware workstations and collaborative coding clusters.
+                    </p>
+                </div>
+
+                <!-- Module 3 -->
+                <div class="glass-panel p-8 rounded-3xl relative overflow-hidden group hover:border-tealLight/50 transition">
+                    <div class="absolute top-0 right-0 p-6 text-tealLight/20 text-6xl font-black group-hover:text-tealLight/30 transition">03</div>
+                    <div class="w-14 h-14 rounded-2xl bg-tealBrand/20 flex items-center justify-center text-tealLight text-2xl mb-6">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3">Certified AI Mentors Program</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Direct 1-on-1 code reviews, architectural feedback, and career guidance from globally recognized certified AI masters.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTORSHIP SHOWCASE -->
+    <section id="mentors" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+            <div>
+                <span class="text-xs uppercase tracking-widest text-tealLight font-bold">Elite Guidance</span>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Learn From Certified AI Mentors</h3>
+            </div>
+            <p class="text-slate-400 max-w-md mt-4 md:mt-0 text-sm">
+                Our mentors are seasoned architects and researchers driving innovation across top tech ecosystems. Contact us at <span class="text-tealLight font-semibold">info@nammaweb.com</span>.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Mentor 1 -->
+            <div class="glass-panel rounded-3xl p-6 text-center">
+                <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-tr from-tealBrand to-tealLight p-1 mb-4">
+                    <div class="w-full h-full bg-emeraldDark rounded-full flex items-center justify-center text-2xl font-bold text-tealLight">RK</div>
+                </div>
+                <h4 class="text-lg font-bold text-white">Dr. Rajesh Kumar</h4>
+                <p class="text-xs text-tealLight font-medium mb-3">Certified Lead AI Architect</p>
+                <p class="text-slate-300 text-xs leading-relaxed">14+ years scaling transformer architectures and enterprise deployments.</p>
+            </div>
+            <!-- Mentor 2 -->
+            <div class="glass-panel rounded-3xl p-6 text-center">
+                <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-tr from-tealBrand to-tealLight p-1 mb-4">
+                    <div class="w-full h-full bg-emeraldDark rounded-full flex items-center justify-center text-2xl font-bold text-tealLight">AN</div>
+                </div>
+                <h4 class="text-lg font-bold text-white">Ananya Rao</h4>
+                <p class="text-xs text-tealLight font-medium mb-3">Certified AI Master Mentor</p>
+                <p class="text-slate-300 text-xs leading-relaxed">Specializes in autonomous agentic loops and high-scale production systems.</p>
+            </div>
+            <!-- Mentor 3 -->
+            <div class="glass-panel rounded-3xl p-6 text-center">
+                <div class="w-24 h-24 mx-auto rounded-full bg-gradient-to-tr from-tealBrand to-tealLight p-1 mb-4">
+                    <div class="w-full h-full bg-emeraldDark rounded-full flex items-center justify-center text-2xl font-bold text-tealLight">VM</div>
+                </div>
+                <h4 class="text-lg font-bold text-white">Vikram Malhotra</h4>
+                <p class="text-xs text-tealLight font-medium mb-3">Offline AI Lab Director</p>
+                <p class="text-slate-300 text-xs leading-relaxed">Directs physical offline AI innovation labs and edge computing clusters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING & PRICING SECTION -->
+    <section id="pricing" class="py-24 bg-emeraldDeep/50 border-t border-teal/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs uppercase tracking-widest text-goldAccent font-bold">Secure Your Enrollment</span>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Flexible Indian Pricing & Durations</h3>
+                <p class="text-slate-400 mt-4">Choose between 30, 60, and 125 days programs. Instant WhatsApp booking connected to <span class="text-tealLight">7676546577</span>.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- 30 Days Plan -->
+                <div class="glass-panel rounded-3xl p-8 flex flex-col justify-between border border-teal/20">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-tealLight bg-tealBrand/20 px-3 py-1 rounded-full">Fast Track</span>
+                            <span class="text-slate-400 text-xs font-bold">30 Days</span>
+                        </div>
+                        <h4 class="text-2xl font-extrabold text-white mb-2">AI Booster Cohort</h4>
+                        <p class="text-slate-300 text-sm mb-6">Rapid foundational AI tutorials and essential offline lab practice.</p>
+                        <div class="text-4xl font-black text-white mb-6">₹24,999 <span class="text-xs text-slate-400 font-normal">/ program</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> 30 Days AI Tutorial Access</li>
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> Standard Offline AI Lab Pass</li>
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> Certified Mentor Check-ins</li>
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> Official Completion Certificate</li>
+                        </ul>
+                    </div>
+                    <button onclick="bookProgram('30 Days Program - ₹24,999')" class="w-full py-3.5 rounded-xl bg-tealBrand/20 hover:bg-tealBrand text-tealLight hover:text-emeraldDark font-bold transition border border-teal/30">
+                        Book 30 Days via WhatsApp
+                    </button>
+                </div>
+
+                <!-- 60 Days Plan (Featured) -->
+                <div class="glass-panel rounded-3xl p-8 flex flex-col justify-between border-2 border-tealLight relative glow-teal bg-emeraldDeep/80">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-tealBrand to-tealLight text-emeraldDark text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg">
+                        Most Popular Choice
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-4 mt-2">
+                            <span class="text-xs font-bold uppercase tracking-wider text-goldAccent bg-goldAccent/20 px-3 py-1 rounded-full">Advanced Master</span>
+                            <span class="text-slate-300 text-xs font-bold">60 Days</span>
+                        </div>
+                        <h4 class="text-2xl font-extrabold text-white mb-2">Pro Master Cohort</h4>
+                        <p class="text-slate-300 text-sm mb-6">Complete end-to-end development, agent workflows, and direct mentorship.</p>
+                        <div class="text-4xl font-black text-white mb-6">₹49,999 <span class="text-xs text-slate-400 font-normal">/ program</span></div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-8">
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> Full 60 Days Advanced Curriculum</li>
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> Unlimited Offline AI Lab Access</li>
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> Weekly 1-on-1 Certified Mentors</li>
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> High-Income Career Placement</li>
+                        </ul>
+                    </div>
+                    <button onclick="bookProgram('60 Days Program - ₹49,999')" class="w-full py-4 rounded-xl bg-gradient-to-r from-tealBrand to-tealLight text-emeraldDark font-extrabold shadow-xl hover:brightness-110 transition">
+                        Book 60 Days via WhatsApp
+                    </button>
+                </div>
+
+                <!-- 125 Days Plan -->
+                <div class="glass-panel rounded-3xl p-8 flex flex-col justify-between border border-teal/20">
+                    <div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-tealLight bg-tealBrand/20 px-3 py-1 rounded-full">Executive Immersion</span>
+                            <span class="text-slate-400 text-xs font-bold">125 Days</span>
+                        </div>
+                        <h4 class="text-2xl font-extrabold text-white mb-2">Master Architect Fellowship</h4>
+                        <p class="text-slate-300 text-sm mb-6">Comprehensive mastery with extended lab incubation & guaranteed placement.</p>
+                        <div class="text-4xl font-black text-white mb-6">₹89,999 <span class="text-xs text-slate-400 font-normal">/ program</span></div>
+                        <ul class="space-y-3 text-sm text-slate-300 mb-8">
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> Complete 125 Days Fellowship</li>
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> Priority Offline AI Lab Workstation</li>
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> Dedicated Lead Mentor Partnership</li>
+                            <li><i class="fa-solid fa-check text-tealLight mr-2"></i> Guaranteed High-Income Placement</li>
+                        </ul>
+                    </div>
+                    <button onclick="bookProgram('125 Days Program - ₹89,999')" class="w-full py-3.5 rounded-xl bg-tealBrand/20 hover:bg-tealBrand text-tealLight hover:text-emeraldDark font-bold transition border border-teal/30">
+                        Book 125 Days via WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEO BLOG SECTION -->
+    <section id="blog" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-xs uppercase tracking-widest text-tealLight font-bold">Expert Insights & News</span>
+            <h3 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">NammaWeb SEO Knowledge Hub</h3>
+            <p class="text-slate-400 mt-4">Stay ahead of industry shifts with our latest articles on artificial intelligence and high-income career tracks.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Article 1 -->
+            <article class="glass-panel rounded-3xl overflow-hidden group flex flex-col justify-between">
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-xs text-tealLight mb-3">
+                        <span><i class="fa-regular fa-calendar mr-1"></i> Sep 18, 2026</span>
+                        <span>•</span>
+                        <span>5 min read</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white group-hover:text-tealLight transition mb-3">
+                        Why Certified AI Master Mentors Drive High-Income Careers in 2026
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Discover how combining structured offline AI labs with expert guidance accelerates your journey to top-tier compensation.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-0">
+                    <a href="#pricing" class="inline-flex items-center gap-2 text-tealLight text-sm font-semibold hover:underline">
+                        Read Full Article <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="glass-panel rounded-3xl overflow-hidden group flex flex-col justify-between">
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-xs text-tealLight mb-3">
+                        <span><i class="fa-regular fa-calendar mr-1"></i> Sep 14, 2026</span>
+                        <span>•</span>
+                        <span>4 min read</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white group-hover:text-tealLight transition mb-3">
+                        Offline AI Labs vs. Online Tutorials: Maximizing Practical Skill
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        An in-depth analysis on why tactile hardware access in offline labs drastically improves real-world engineering retention.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-0">
+                    <a href="#pricing" class="inline-flex items-center gap-2 text-tealLight text-sm font-semibold hover:underline">
+                        Read Full Article <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="glass-panel rounded-3xl overflow-hidden group flex flex-col justify-between">
+                <div class="p-6">
+                    <div class="flex items-center gap-3 text-xs text-tealLight mb-3">
+                        <span><i class="fa-regular fa-calendar mr-1"></i> Sep 10, 2026</span>
+                        <span>•</span>
+                        <span>6 min read</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-white group-hover:text-tealLight transition mb-3">
+                        How to Choose Between 30, 60, and 125 Days AI Master Tracks
+                    </h4>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Evaluate your current schedule and career goals to select the ideal program duration for maximum professional return.
+                    </p>
+                </div>
+                <div class="px-6 pb-6 pt-0">
+                    <a href="#pricing" class="inline-flex items-center gap-2 text-tealLight text-sm font-semibold hover:underline">
+                        Read Full Article <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-emeraldDeep/90 border-t border-teal/20 pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-8 h-8 flex items-center justify-center bg-white/5 rounded-lg p-1 border border-tealLight/30">
+                            <img src="logo.png" alt="Logo" class="w-full h-full object-contain">
+                        </div>
+                        <span class="text-2xl font-extrabold text-white">Namma<span class="text-tealLight">Web</span></span>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-sm mb-4 leading-relaxed">
+                        Empowering engineers with high-income career opportunities, certified mentorship, and state-of-the-art offline AI laboratories.
+                    </p>
+                    <div class="text-sm text-tealLight font-medium">
+                        <i class="fa-solid fa-envelope mr-2"></i> info@nammaweb.com
+                    </div>
                 </div>
                 <div>
-                    <span class="text-xl font-extrabold tracking-tight text-white block leading-none">NAMMAWEB <span class="text-brand-gold">AI SUITE</span></span>
-                    <span class="text-[10px] text-slate-400 tracking-wider uppercase font-semibold">NEP 2020 Certified Partner</span>
-                </div>
-            </div>
-
-            <!-- Page Navigation Tabs -->
-            <nav class="hidden md:flex space-x-8 text-sm font-medium">
-                <button onclick="switchPage('home')" id="nav-home" class="transition-colors hover:text-brand-gold text-brand-gold border-b-2 border-brand-gold pb-1">Program Overview</button>
-                <button onclick="switchPage('blog')" id="nav-blog" class="transition-colors hover:text-brand-gold text-slate-300 pb-1">NEP 2020 Insights & Blog</button>
-                <a href="#pricing" onclick="switchPage('home')" class="transition-colors hover:text-brand-gold text-slate-300 pb-1">Enrollment Plans</a>
-            </nav>
-
-            <a href="#pricing" onclick="switchPage('home')" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-gold to-yellow-500 text-black hover:brightness-110 transition shadow-lg shadow-brand-gold/10">
-                Apply Now
-            </a>
-        </div>
-    </header>
-
-    <!-- PAGE 1: PROGRAM OVERVIEW & LANDING -->
-    <main id="page-home" class="block">
-        <!-- HERO SECTION -->
-        <section class="relative py-20 lg:py-32 overflow-hidden border-b border-slate-800/80">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.08),transparent_50%)]"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-3xl mx-auto">
-                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-gold/10 text-brand-gold border border-brand-gold/20 mb-6">
-                        <i data-lucide="award" class="w-4 h-4"></i> Official NEP 2020 AI Trainer Standard
-                    </span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-                        Become a Certified <span class="bg-gradient-to-r from-brand-gold via-yellow-200 to-white bg-clip-text text-transparent">AI Master Mentor</span>
-                    </h1>
-                    <p class="mt-6 text-lg text-slate-300 leading-relaxed font-light">
-                        Unlock high-income career opportunities by empowering Schools & PU Colleges with cutting-edge AI curricula under NEP 2020 guidelines.
-                    </p>
-                    <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <a href="#pricing" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-brand-gold to-yellow-500 text-black font-bold text-base hover:shadow-lg hover:shadow-brand-gold/20 transition-all flex items-center justify-center gap-2">
-                            Explore Certifications <i data-lucide="arrow-right" class="w-5 h-5"></i>
-                        </a>
-                        <a href="https://wa.me/917676546577?text=Hi%20NammaWeb%20AI%20Suite,%20I%20want%20to%20know%20more%20about%20the%20Certified%20AI%20Master%20Mentor%20Program." target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl border border-slate-700 bg-slate-900/50 hover:bg-slate-800 text-white font-semibold text-base transition flex items-center justify-center gap-2">
-                            <i data-lucide="message-square" class="w-5 h-5 text-emerald-400"></i> Instant WhatsApp Advisory
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6-LINE OPPORTUNITY BREAKDOWN SECTION -->
-        <section class="py-20 bg-brand-navy/50">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-white">Certified AI Master Mentor Program</h2>
-                    <p class="text-brand-gold font-semibold text-sm tracking-widest uppercase mt-2">High-Income Career Opportunity</p>
-                </div>
-                
-                <div class="bg-slate-900/80 border border-slate-800 rounded-2xl p-8 sm:p-10 shadow-2xl relative">
-                    <div class="space-y-6 text-slate-200 text-base sm:text-lg leading-relaxed font-normal">
-                        <div class="flex items-start gap-4">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center font-bold text-sm border border-brand-gold/30">1</span>
-                            <p>Transform your passion for technology into a highly remunerative career as a Certified AI Trainer under the newly implemented National Education Policy (NEP 2020) guidelines.</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center font-bold text-sm border border-brand-gold/30">2</span>
-                            <p>Bridge the critical technology gap in Schools & PU Colleges by delivering standardized, future-ready artificial intelligence, machine learning, and robotics modules.</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center font-bold text-sm border border-brand-gold/30">3</span>
-                            <p>Unlock lucrative consulting fees, institution retainer contracts, and high-income potential through NammaWeb AI Suite’s industry-endorsed mentorship framework.</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center font-bold text-sm border border-brand-gold/30">4</span>
-                            <p>Gain access to turnkey classroom lesson plans, interactive AI lab setups, and automated evaluation toolkits tailored specifically for K-12 and pre-university environments.</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center font-bold text-sm border border-brand-gold/30">5</span>
-                            <p>Empower competitive exam aspirants in NEET, CET, and JEE programs with computational thinking, data analytics, and automated problem-solving skills.</p>
-                        </div>
-                        <div class="flex items-start gap-4">
-                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center font-bold text-sm border border-brand-gold/30">6</span>
-                            <p>Establish long-term professional authority as an accredited institutional AI advisor, positioning yourself at the forefront of India's educational evolution.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- NEET / CET / JEE GALLERY SECTION -->
-        <section class="py-20 border-t border-slate-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl font-bold text-white">Empowering NEET, CET & JEE Academic Environments</h2>
-                    <p class="text-slate-400 mt-3">Our AI Master Mentors install high-impact computational labs and AI tools inside medical & engineering preparation colleges.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Image 1 -->
-                    <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
-                        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80" alt="JEE Engineering AI Lab Integration" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90"></div>
-                        <div class="absolute bottom-0 p-5">
-                            <span class="text-[10px] font-bold text-brand-gold uppercase tracking-wider bg-brand-gold/10 px-2 py-0.5 rounded border border-brand-gold/30">JEE & Engineering</span>
-                            <h3 class="text-lg font-bold text-white mt-1">AI Diagnostics in Physics & Math</h3>
-                        </div>
-                    </div>
-
-                    <!-- Image 2 -->
-                    <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
-                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=800&q=80" alt="NEET Medical AI Simulations" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90"></div>
-                        <div class="absolute bottom-0 p-5">
-                            <span class="text-[10px] font-bold text-emerald-400 uppercase tracking-wider bg-emerald-400/10 px-2 py-0.5 rounded border border-emerald-400/30">NEET & Medical</span>
-                            <h3 class="text-lg font-bold text-white mt-1">Bio-Informatics & AI Simulations</h3>
-                        </div>
-                    </div>
-
-                    <!-- Image 3 -->
-                    <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
-                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="KCET State Entrance Coaching" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90"></div>
-                        <div class="absolute bottom-0 p-5">
-                            <span class="text-[10px] font-bold text-blue-400 uppercase tracking-wider bg-blue-400/10 px-2 py-0.5 rounded border border-blue-400/30">CET & PU Colleges</span>
-                            <h3 class="text-lg font-bold text-white mt-1">Automated Test Performance Analytics</h3>
-                        </div>
-                    </div>
-
-                    <!-- Image 4 -->
-                    <div class="group relative rounded-2xl overflow-hidden border border-slate-800 bg-slate-900">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Smart Classrooms NEP 2020" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-90"></div>
-                        <div class="absolute bottom-0 p-5">
-                            <span class="text-[10px] font-bold text-purple-400 uppercase tracking-wider bg-purple-400/10 px-2 py-0.5 rounded border border-purple-400/30">NEP 2020 Smart Labs</span>
-                            <h3 class="text-lg font-bold text-white mt-1">Interactive Prompting & Robotics</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BOOKING & PRICING SECTION -->
-        <section id="pricing" class="py-24 bg-brand-navy/30 relative border-t border-slate-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16">
-                    <h2 class="text-3xl font-extrabold text-white sm:text-4xl">Program Certification & Booking Tiers</h2>
-                    <p class="text-slate-400 mt-4">Select the right duration to match your career goals. All prices are inclusive of NEP 2020 certification material and institutional placement support.</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    <!-- 30 Days Plan -->
-                    <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-700 transition">
-                        <div>
-                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Foundation Certification</span>
-                            <h3 class="text-2xl font-bold text-white mt-2">30 Days Fast-Track</h3>
-                            <p class="text-slate-400 text-sm mt-2">Ideal for existing school teachers and tutors seeking rapid skill upgrades under NEP guidelines.</p>
-                            <div class="my-6">
-                                <span class="text-4xl font-extrabold text-white">₹14,999</span>
-                                <span class="text-slate-400 text-sm"> / one-time</span>
-                            </div>
-                            <ul class="space-y-3 text-sm text-slate-300">
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Basic AI & Prompting Curriculum</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> NEP 2020 Framework Overview</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Digital Mentor Certificate</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Weekend Live Doubt Sessions</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/917676546577?text=I%20am%20interested%20in%20the%2030-Day%20AI%20Master%20Mentor%20Program%20(%E2%82%B914,999)." target="_blank" class="mt-8 w-full py-3.5 rounded-xl border border-brand-gold text-brand-gold font-bold text-center hover:bg-brand-gold hover:text-black transition">
-                            Book 30 Days Program
-                        </a>
-                    </div>
-
-                    <!-- 60 Days Plan (Featured) -->
-                    <div class="bg-slate-900/90 border-2 border-brand-gold rounded-3xl p-8 flex flex-col justify-between relative shadow-2xl shadow-brand-gold/10 scale-105">
-                        <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-brand-gold to-yellow-500 text-black px-4 py-1 rounded-full text-xs font-extrabold uppercase tracking-wider">
-                            Most Popular
-                        </div>
-                        <div>
-                            <span class="text-xs font-bold uppercase tracking-wider text-brand-gold">Advanced Professional</span>
-                            <h3 class="text-2xl font-bold text-white mt-2">60 Days Master Mentor</h3>
-                            <p class="text-slate-400 text-sm mt-2">Comprehensive hands-on training tailored for PU Colleges & Entrance exam institutes (NEET/JEE).</p>
-                            <div class="my-6">
-                                <span class="text-4xl font-extrabold text-white">₹29,999</span>
-                                <span class="text-slate-400 text-sm"> / one-time</span>
-                            </div>
-                            <ul class="space-y-3 text-sm text-slate-300">
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Advanced Generative AI & Lab Toolkit</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> NEET/JEE AI Diagnostic Integration</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Institutional Placement Assistance</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Physical NEP Certified Mentor Badge</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/917676546577?text=I%20am%20interested%20in%20the%2060-Day%20AI%20Master%20Mentor%20Program%20(%E2%82%B929,999)." target="_blank" class="mt-8 w-full py-3.5 rounded-xl bg-gradient-to-r from-brand-gold to-yellow-500 text-black font-bold text-center hover:brightness-110 transition shadow-md">
-                            Book 60 Days Program
-                        </a>
-                    </div>
-
-                    <!-- 125 Days Plan -->
-                    <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 flex flex-col justify-between hover:border-slate-700 transition">
-                        <div>
-                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Institutional Consultant</span>
-                            <h3 class="text-2xl font-bold text-white mt-2">125 Days Fellowship</h3>
-                            <p class="text-slate-400 text-sm mt-2">Complete incubator path to start your own AI Training Agency for regional school networks.</p>
-                            <div class="my-6">
-                                <span class="text-4xl font-extrabold text-white">₹59,999</span>
-                                <span class="text-slate-400 text-sm"> / one-time</span>
-                            </div>
-                            <ul class="space-y-3 text-sm text-slate-300">
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Full Agency Franchise Rights Support</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Direct MoU Client Acquisition Guidance</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> 1-on-1 Mentorship with NammaWeb Founders</li>
-                                <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-gold"></i> Lifetime Course Content Updates</li>
-                            </ul>
-                        </div>
-                        <a href="https://wa.me/917676546577?text=I%20am%20interested%20in%20the%20125-Day%20AI%20Fellowship%20Program%20(%E2%82%B959,999)." target="_blank" class="mt-8 w-full py-3.5 rounded-xl border border-brand-gold text-brand-gold font-bold text-center hover:bg-brand-gold hover:text-black transition">
-                            Book 125 Days Program
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- PAGE 2: SEO BLOG & CURRICULUM -->
-    <main id="page-blog" class="hidden">
-        <section class="py-16 bg-slate-950">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="mb-10">
-                    <span class="text-brand-gold text-xs font-bold uppercase tracking-widest">Official Knowledge Hub</span>
-                    <h1 class="text-3xl sm:text-4xl font-black text-white mt-2">NEP 2020 & The Surge of AI Training Careers in Indian Schools</h1>
-                    <p class="text-slate-400 text-sm mt-3">Published by NammaWeb AI Suite • Updated September 2026</p>
-                </div>
-
-                <article class="prose prose-invert max-w-none text-slate-300 space-y-6 leading-relaxed">
-                    <p class="text-lg text-slate-200">
-                        The integration of Artificial Intelligence under the <strong>National Education Policy (NEP 2020)</strong> has created an unprecedented demand for qualified AI Master Mentors in Indian secondary schools and Pre-University (PU) colleges. As traditional rote learning makes way for experiential learning and computational thinking, institutions are urgently seeking certified experts to guide their educators and students.
-                    </p>
-
-                    <h2 class="text-2xl font-bold text-white mt-8">Why Schools & PU Colleges Need Certified AI Trainers</h2>
-                    <p>
-                        With the mandates set by NEP 2020, schools are required to introduce AI modules from Grade 6 onwards. Furthermore, competitive exam environments—specifically <strong>NEET (Medical), JEE (Engineering), and State CETs</strong>—are integrating AI-driven diagnostic tools for personalized test preparation.
-                    </p>
-                    <ul class="list-disc pl-6 space-y-2 text-slate-300">
-                        <li><strong>High Revenue Opportunity:</strong> Certified trainers command high consulting fees for institutional workshops and annual retainer programs.</li>
-                        <li><strong>Standardized Curriculum:</strong> NammaWeb AI Suite provides mentors with pre-designed, compliant frameworks to deliver immediate value.</li>
-                        <li><strong>Future-Proof Skillset:</strong> Mentors bridging the gap between technological advances and educational delivery remain in high demand.</li>
+                    <h5 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Quick Navigation</h5>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="#overview" class="hover:text-tealLight transition">Overview</a></li>
+                        <li><a href="#curriculum" class="hover:text-tealLight transition">AI Labs & Tutorials</a></li>
+                        <li><a href="#mentors" class="hover:text-tealLight transition">Certified Mentors</a></li>
+                        <li><a href="#pricing" class="hover:text-tealLight transition">Enrollment Tiers</a></li>
+                        <li><a href="#blog" class="hover:text-tealLight transition">SEO Blog</a></li>
                     </ul>
-
-                    <h2 class="text-2xl font-bold text-white mt-8">How to Transition Into a Certified AI Master Mentor</h2>
-                    <p>
-                        Whether you are a teacher, an IT professional, or an ed-tech enthusiast, the <strong>Certified AI Master Mentor Program</strong> offers a structured path:
-                    </p>
-                    <ol class="list-decimal pl-6 space-y-2 text-slate-300">
-                        <li><strong>Choose Your Program Track:</strong> Select between our 30-day, 60-day, or 125-day intensive modules based on your career trajectory.</li>
-                        <li><strong>Master AI Toolsets:</strong> Gain practical expertise in Generative AI, prompt engineering, robotics basics, and academic analytics.</li>
-                        <li><strong>Obtain NEP 2020 Accreditation:</strong> Receive verified credential badges endorsed by NammaWeb AI Suite for school partnership deployment.</li>
-                    </ol>
-
-                    <div class="mt-12 p-8 bg-brand-navy rounded-2xl border border-slate-800 text-center">
-                        <h3 class="text-xl font-bold text-white">Ready to Lead the Educational Revolution?</h3>
-                        <p class="text-slate-400 text-sm mt-2">Join our upcoming batch and become a certified AI Mentor for schools near you.</p>
-                        <a href="https://wa.me/917676546577?text=Hi,%20I%20read%20your%20NEP%202020%20blog%20and%20want%20to%20apply." target="_blank" class="mt-6 inline-block px-6 py-3 rounded-xl bg-brand-gold text-black font-bold text-sm hover:brightness-110">
-                            Speak to an Advisor
-                        </a>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER WITH BRAND LOGO & INFO EMAIL -->
-    <footer class="bg-slate-950 border-t border-slate-800/80 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
-            
-            <!-- EXACT RECREATED TEAL GEOMETRIC LOGO VECTOR -->
-            <div class="flex items-center space-x-3 mb-3 cursor-pointer" onclick="switchPage('home')">
-                <div class="w-12 h-12 rounded-xl bg-slate-900 border border-teal-500/40 flex items-center justify-center p-2 shadow-lg shadow-teal-950/50">
-                    <svg viewBox="0 0 500 500" class="w-full h-full text-teal-600" fill="none" stroke="currentColor" stroke-width="36" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M140 100 L320 280 L230 370 L50 190 Z"></path>
-                        <path d="M360 100 L180 280 L270 370 L450 190 Z"></path>
-                    </svg>
                 </div>
-                <div class="text-left">
-                    <span class="text-2xl font-black tracking-tight text-white block leading-none">NAMMAWEB <span class="text-brand-gold">AI SUITE</span></span>
-                    <span class="text-[11px] text-slate-400 tracking-wider uppercase font-medium">NEP 2020 Master Mentor Portal</span>
+                <div>
+                    <h5 class="text-white font-bold mb-4 text-sm uppercase tracking-wider">Connect & Support</h5>
+                    <ul class="space-y-2 text-sm text-slate-400">
+                        <li><a href="https://wa.me/917676546577" target="_blank" class="hover:text-tealLight transition"><i class="fa-brands fa-whatsapp mr-2 text-tealLight"></i> WhatsApp Chat</a></li>
+                        <li><a href="mailto:info@nammaweb.com" class="hover:text-tealLight transition"><i class="fa-solid fa-envelope mr-2 text-tealLight"></i> info@nammaweb.com</a></li>
+                        <li><span class="text-slate-500">Phone: +91 76765 46577</span></li>
+                    </ul>
                 </div>
             </div>
-
-            <!-- Mandatory Requested Info Email -->
-            <a href="mailto:info@nammaweb.com" class="text-slate-300 hover:text-brand-gold font-medium text-sm transition flex items-center gap-2 my-2">
-                <i data-lucide="mail" class="w-4 h-4 text-brand-gold"></i> info@nammaweb.com
-            </a>
-
-            <div class="flex space-x-6 text-xs text-slate-400 my-4">
-                <button onclick="switchPage('home')" class="hover:text-white">Program Details</button>
-                <button onclick="switchPage('blog')" class="hover:text-white">NEP 2020 Blog</button>
-                <a href="#pricing" onclick="switchPage('home')" class="hover:text-white">Indian Pricing Tiers</a>
+            <div class="border-t border-teal/10 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 NammaWeb Advanced AI Research Labs. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 sm:mt-0">
+                    <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                    <a href="#" class="hover:text-slate-400">Terms of Service</a>
+                    <a href="#" class="hover:text-slate-400">GitHub Pages Ready</a>
+                </div>
             </div>
-
-            <p class="text-xs text-slate-500 mt-2">© 2026 NammaWeb AI Suite. All rights reserved. NEP 2020 Aligned Educational Partner.</p>
         </div>
     </footer>
 
-    <!-- FLOATING WHATSAPP POP-UP BUTTON -->
-    <div class="fixed bottom-6 right-6 z-50">
-        <a href="https://wa.me/917676546577?text=Hi%20NammaWeb%20AI%20Suite,%20I%20have%20a%20query%20about%20the%20Certified%20AI%20Master%20Mentor%20Program." 
-           target="_blank" 
-           class="flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-4 py-3 rounded-full shadow-2xl transition-all transform hover:scale-105 group border-2 border-emerald-300/40">
-            <i data-lucide="phone-call" class="w-6 h-6 fill-white"></i>
-            <span class="hidden sm:inline text-sm pr-1">Chat on WhatsApp <br><span class="text-[10px] font-normal opacity-90">+91 7676546577</span></span>
-            <span class="relative flex h-3 w-3 -mt-4 -mr-1">
-                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
-            </span>
+    <!-- FLOATING WHATSAPP POP-IN WIDGET -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+        <!-- Notification Bubble -->
+        <div id="whatsapp-bubble" class="glass-panel px-4 py-2.5 rounded-2xl shadow-2xl text-xs font-semibold text-white animate-bounce hidden sm:block border border-tealLight/40">
+            💬 Chat with WhatsApp 7676546577
+        </div>
+        <!-- WhatsApp Trigger Button -->
+        <a href="https://wa.me/917676546577?text=Hi%20NammaWeb,%20I%20am%20interested%20in%20the%20Certified%20AI%20Master%20Mentor%20Program." target="_blank" class="w-14 h-14 bg-emerald-600 hover:bg-emerald-500 text-white rounded-full flex items-center justify-center shadow-2xl transform hover:scale-110 transition duration-300 border-2 border-tealLight">
+            <i class="fa-brands fa-whatsapp text-3xl"></i>
         </a>
     </div>
 
-    <!-- JAVASCRIPT FOR PAGE SWITCHING & ICONS -->
+    <!-- JAVASCRIPT BOOKING HANDLER -->
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        // Dynamic Two-Page Switcher Logic
-        function switchPage(page) {
-            const homePage = document.getElementById('page-home');
-            const blogPage = document.getElementById('page-blog');
-            const navHome = document.getElementById('nav-home');
-            const navBlog = document.getElementById('nav-blog');
-
-            if (page === 'home') {
-                homePage.classList.remove('hidden');
-                homePage.classList.add('block');
-                blogPage.classList.remove('block');
-                blogPage.classList.add('hidden');
-
-                navHome.classList.add('text-brand-gold', 'border-b-2', 'border-brand-gold');
-                navHome.classList.remove('text-slate-300');
-                navBlog.classList.remove('text-brand-gold', 'border-b-2', 'border-brand-gold');
-                navBlog.classList.add('text-slate-300');
-            } else if (page === 'blog') {
-                blogPage.classList.remove('hidden');
-                blogPage.classList.add('block');
-                homePage.classList.remove('block');
-                homePage.classList.add('hidden');
-
-                navBlog.classList.add('text-brand-gold', 'border-b-2', 'border-brand-gold');
-                navBlog.classList.remove('text-slate-300');
-                navHome.classList.remove('text-brand-gold', 'border-b-2', 'border-brand-gold');
-                navHome.classList.add('text-slate-300');
-            }
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+        function bookProgram(packageName) {
+            const phoneNumber = "917676546577";
+            const message = encodeURIComponent(`Hello NammaWeb Team (info@nammaweb.com), I would like to book the ${packageName}. Please guide me through the onboarding.`);
+            window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
         }
     </script>
 </body>
